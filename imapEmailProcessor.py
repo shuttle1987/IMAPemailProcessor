@@ -1,4 +1,5 @@
-"""This little script removes IMAP related stuff from emails.
+"""This little script processes out quoted-printable formatting for emails
+that you might encounter when viewing raw emails on the server.
 This includes those pesky =20 and similar.
 
 Usage:
