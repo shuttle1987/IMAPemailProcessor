@@ -10,8 +10,6 @@ Janis Lesinskis - March 2015
 
 import quopri
 raw_email_file_name = 'rawEmailMarch2015.txt'
-raw_email = open(raw_email_file_name, 'r')
-output_file = open('converted' + raw_email_file_name, 'w')
-quopri.decode(raw_email, output_file)
-raw_email.close()
-output_file.close()
+with open(raw_email_file_name, 'r') as raw_email:
+    with open('converted' + raw_email_file_name, 'w') as output_file:
+        quopri.decode(raw_email, output_file)
